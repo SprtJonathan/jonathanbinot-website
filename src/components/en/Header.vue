@@ -27,15 +27,7 @@
           width="24"
         />
       </button>
-      <button @click="setLanguageEn" class="en">
-        <img
-          src="@/assets/images/EN.png"
-          alt="EN version"
-          class="en-flag"
-          height="24"
-          width="24"
-        />
-      </button>
+
       <button @click="toggleTheme" aria-label="Toggle themes">
         <span class="dark-mode-button" v-if="this.theme == 'darkMode'"
           ><b-icon icon="sun"></b-icon
@@ -67,10 +59,6 @@ export default {
     },
     setLanguageFr() {
       localStorage.setItem("language", "fr");
-      location.reload();
-    },
-    setLanguageEn() {
-      localStorage.setItem("language", "en");
       location.reload();
     },
   },

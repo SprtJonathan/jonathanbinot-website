@@ -18,15 +18,6 @@
       </li>
     </ul>
     <section class="header-lng-dark">
-      <button @click="setLanguageFr" class="fr">
-        <img
-          src="@/assets/images/FR.png"
-          alt="version FR"
-          class="fr-flag"
-          height="24"
-          width="24"
-        />
-      </button>
       <button @click="setLanguageEn" class="en">
         <img
           src="@/assets/images/EN.png"
@@ -69,10 +60,6 @@ export default {
     },
     test() {
       console.log(this.$state.language);
-    },
-    setLanguageFr() {
-      localStorage.setItem("language", "fr");
-      location.reload();
     },
     setLanguageEn() {
       localStorage.setItem("language", "en");

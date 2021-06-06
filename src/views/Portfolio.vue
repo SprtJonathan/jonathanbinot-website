@@ -1,20 +1,20 @@
 <template>
   <div>
-    <ResumeFR v-if="this.$store.state.language == 'fr'" />
-    <ResumeEN v-if="this.$store.state.language == 'en'" />
+    <PortfolioFR v-if="this.$store.state.language == 'fr'" />
+    <PortfolioEN v-if="this.$store.state.language == 'en'" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import ResumeFR from "@/components/fr/Resume";
-import ResumeEN from "@/components/en/Resume";
+import PortfolioFR from "@/components/fr/Portfolio";
+import PortfolioEN from "@/components/en/Portfolio";
 
 export default {
   name: "Home",
   components: {
-    ResumeFR,
-    ResumeEN,
+    PortfolioFR,
+    PortfolioEN,
   },
   created() {
     if (!localStorage.getItem("language")) {
