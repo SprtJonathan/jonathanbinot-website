@@ -2,8 +2,9 @@
   --background-color: #f2f2f2;
   --text-color: $text-color;
   --marked-color: $text-color;
-  --background-image: linear-gradient(-127deg, #333333, #080f1b);
+  --background-image: linear-gradient(-127deg, #ffffff, #f5f5f5);
   --color-links: #0099ff;
+  --inverted-links: #ffe550;
 }
 
 [data-theme="darkMode"] {
@@ -12,6 +13,7 @@
   --marked-color: #f2f2f2;
   --background-image: linear-gradient(-127deg, #0b1424, #080f1b);
   --color-links: #ffe550;
+  --inverted-links: #0099ff;
 }
 
 html {
@@ -64,16 +66,67 @@ button {
   flex-direction: column;
 }
 
+.collapsing {
+  transform: translateY(200px) scaleY(0.5);
+  opacity: 0;
+}
+
 .collapsible {
+  transition: 300ms ease-in-out;
+  @include background-shadow-default;
+  width: 98%;
+  margin: auto;
+  padding: 2rem 0rem;
   &--button {
-    background-image: var(--background-image);
-    color: white;
-    padding: 0px 2rem;
+    padding: 8px 2rem;
     margin: 1rem;
-    border-radius: 1rem;
+    border: 0px transparent;
+    @include background-shadow-default;
+    &:focus {
+      color: var(--text-color);
+    }
+    &:hover {
+      color: var(--color-links);
+    }
     h2 {
       text-align: center;
     }
+  }
+  &--content {
+    padding: 1rem;
+  }
+  &--text {
+    text-align: left;
+  }
+  section {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+mark {
+  margin: 0px;
+  padding: 0px;
+  &.blue-undeline {
+    background-color: transparent;
+    padding-bottom: 3px;
+    border-bottom: 3px solid $primary-color;
+    color: var(--marked-color);
+  }
+}
+
+.modal-content {
+  width: fit-content;
+}
+
+.modal-button {
+  color: var(--color-links);
+  background-color: transparent;
+  border: 0px;
+  margin: 0px;
+  &:hover {
+    background-color: rgba(14, 14, 14, 0.25);
+    color: var(--inverted-links);
   }
 }
 

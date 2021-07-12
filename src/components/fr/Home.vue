@@ -11,17 +11,19 @@
       </h2>
 
       <p>
-        Je m'appelle Jonathan Binot, j'ai <span id="age">{{age}}</span> ans et je
-        suis actuellement en recherche d'une alternance dans le cadre de ma
+        Je m'appelle Jonathan Binot, j'ai <span id="age">{{ age }}</span> ans et
+        je suis actuellement en recherche d'une alternance dans le cadre de ma
         formation dans le développement web avec OpenClassrooms.<br /><br />Depuis
         tout petit, je suis passionné d'informatique et de jeux vidéo, si bien
         que j'ai décidé de me donner les moyens de travailler dans le domaine.
         L'informatique étant très vaste, il y a deux disciplines pour lesquelles
         j'ai envie de m'investir professionnellement : <br /><br />
       </p>
-      <li><mark>Le dévelop</mark>pement web</li>
+      <li><mark class="blue-undeline">Le dévelop</mark>pement web</li>
       <br /><br />
-      <li><mark>Le dévelop</mark>pement de jeux vidéo.<br /><br /></li>
+      <li>
+        <mark class="blue-undeline">Le dévelop</mark>pement de jeux vidéo.<br /><br />
+      </li>
       <p>
         Motivé pour atteindre mes objectifs, j'ai commencé très tôt à apprendre
         en autodidacte, avec mon ordinateur et les logiciels de développement à

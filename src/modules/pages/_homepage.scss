@@ -19,10 +19,4 @@ p {
   li {
     font-family: $secondary-font;
   }
-  mark {
-    background-color: transparent;
-    padding-bottom: 3px;
-    border-bottom: 3px solid $primary-color;
-    color: var(--marked-color);
-  }
 }

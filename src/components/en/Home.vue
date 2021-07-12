@@ -21,9 +21,9 @@
         sector. Computer tech being a vast domain, there are two disciplins in
         which I would like to invest professionnaly :
       </p>
-      <li><mark>Web</mark> development</li>
+      <li><mark class="blue-undeline">Web</mark>development</li>
       <br /><br />
-      <li><mark>Gam</mark>e development.</li>
+      <li><mark class="blue-undeline">Gam</mark>edevelopment.</li>
       <br />
       <br />
       <p>

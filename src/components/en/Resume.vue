@@ -1,22 +1,35 @@
 <template>
   <div>
-    <header>
+    <header class="header--resume">
       <div class="title">
         <h1>JONATHAN BINOT</h1>
-        <h2 class="descriptif">
-          Work-student in web development - Available now
-        </h2>
-        <span class="descriptif"
-          >3 days in workplace per week for a duration of a year</span
-        >
       </div>
-
-      <img
-        src="@/assets/images/PPCV.png"
-        alt="Ma photo"
-        class="title-img"
-        height="92"
-      />
+      <article class="header--block">
+        <img
+          src="@/assets/images/PPCV.png"
+          alt="Ma photo"
+          class="header--block--img"
+          height="92"
+        />
+        <div class="header--block--text">
+          <h2 class="descriptif">
+            Web developer - Available now
+          </h2>
+          <p class="descriptif">
+            Passionate about computers and high tech since I was a child, I wish
+            to work in web development while I follow lessons with
+            OpenClassrooms. I can easily and quickly adapt to change and resolve
+            issues that could occur while at work. You can access to some of my
+            work by following this link :
+            <a
+              class="link"
+              href="https://github.com/SprtJonathan"
+              target="blank"
+              >My GitHub profile</a
+            >
+          </p>
+        </div>
+      </article>
 
       <div class="title-info">
         <p>
@@ -47,7 +60,7 @@
       <b-collapse class="collapsible" id="collapse-school">
         <section id="Formation">
           <div class="frm-desc">
-            <h3>2020</h3>
+            <h3>2020 - 2021</h3>
             <p>
               OpenClassrooms : Web developer - RNCP level III diploma
               (second-year university level / degree level) :<br /><br />
@@ -187,13 +200,63 @@
                 Live Streaming : XSplit Broadcaster, OBS and other softwares
               </p>
               <p>
-                HTML/CSS : Creation of simple web pages (My portfolio for
-                instance)
+                HTML/CSS/SASS :
+              </p>
+              <ul>
+                <li>
+                  <p>
+                    Creation of websites (My portfolio and the projects of my
+                    courses at OpenClassrooms)
+                  </p>
+                </li>
+                <li><p>Creation of CSS animations</p></li>
+                <li>
+                  <p>
+                    Validated the course during my first year in
+                    Maths-Informatique
+                  </p>
+                </li>
+              </ul>
+              <p>
+                Javascript/VueJS : Creation of an e-shop website, an entreprise
+                social network and APIs. Projects validated.
+              </p>
+              <p>
+                C/C++ : Validated the course during my first year in
+                Maths-Informatique.
               </p>
               <p>Unreal Engine 4 and blueprints coding : Elementary notions</p>
               <p>Source Engine 1 & 2 : Elementary notions in Level Design</p>
               <p>Complete setup and maintenance of a PC</p>
               <p>Setup and configuration of an OS</p>
+            </div>
+          </div>
+        </b-collapse>
+
+        <b-button class="collapsible--button" v-b-toggle.collapse-projects>
+          <h2 class="active">Projects</h2>
+        </b-button>
+        <b-collapse class="collapsible" id="collapse-projects">
+          <div class="projects">
+            <div class="collapsible--content">
+              <h3 class="collapsible--text">
+                <mark class="blue-undeline">Val</mark>idated projects
+              </h3>
+              <p>Transform a sketch into a website</p>
+              <p>Dynamise a webpage with CSS animations</p>
+              <p>Optimize an existing website</p>
+              <p>Create an e-shop</p>
+              <p>
+                Build a secure API for a food rate app
+              </p>
+              <p>
+                Create an entreprise social network
+              </p>
+
+              <h3 class="collapsible--text">
+                <mark class="blue-undeline">Per</mark>sonal projects
+              </h3>
+              <p>Personal website</p>
             </div>
           </div>
         </b-collapse>
@@ -262,7 +325,7 @@
             </p>
             <p>
               Photograph editing (on Photoshop) for personnal projects. <br /><a
-                class="modal-button"
+                class="modal-button link"
                 href="#photoModal"
                 >Learn more...</a
               >
@@ -273,7 +336,7 @@
             <p>
               Learning of different game dev softwares such as Unreal Engine 4,
               Source Engine 1 & 2, and more recently Unity on self-taught.
-              <br /><a class="modal-button" href="#gamedevModal"
+              <br /><a class="modal-button link" href="#gamedevModal"
                 >Learn more...</a
               >
             </p>
