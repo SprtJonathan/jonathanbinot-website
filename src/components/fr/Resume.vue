@@ -118,7 +118,7 @@
               2020 en CDI
             </h3>
             <div class="exp-content">
-              <a href="https://latetedanslesnuages.com"
+              <a href="https://latetedanslesnuages.com" target="_blank"
                 ><img
                   src="@/assets/images/ltdn.png"
                   alt="logo la tete dans les nuages"
@@ -153,7 +153,7 @@
           <div class="exp-desc">
             <h3>Février 2016 - 1 semaine</h3>
             <div class="exp-content">
-              <a href="https://www.epitech.eu/"
+              <a href="https://www.epitech.eu/" target="_blank"
                 ><img
                   src="@/assets/images/epitech-logo.jpg"
                   alt="logo epitech"
@@ -173,7 +173,7 @@
           <div class="exp-desc">
             <h3>Février 2015 - 1 semaine</h3>
             <div class="exp-content">
-              <a href="https://www.pole-emploi.fr/accueil/"
+              <a href="https://www.pole-emploi.fr/accueil/" target="_blank"
                 ><img
                   src="@/assets/images/pole-emploi-logo.png"
                   alt="logo pole emploi"
@@ -335,16 +335,18 @@
             </p>
             <p>
               Montage photo (sur Photoshop) pour des projets personnels.
-              <br /><b-button v-b-modal.photoModal class="modal-button link"
-                >En savoir plus...</b-button
-              >
+              <br />
+              <b-button v-b-modal.photoModal class="modal-button link">
+                En savoir plus...
+              </b-button>
             </p>
           </div>
           <div class="hobby-desc">
             <h3 class="collapsible--text">Jeu Vidéo</h3>
             <p>
               Apprentissage de différents logiciels de développement de jeux
-              vidéo (Unreal Engine 4, Source 1 et 2) en autodidacte. <br />
+              vidéo (Unreal Engine 4, Source 1 et 2) en autodidacte.
+              <br />
               <b-button v-b-modal.gamedevModal class="modal-button link">
                 En savoir plus...
               </b-button>

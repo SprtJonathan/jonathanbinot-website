@@ -1,9 +1,9 @@
 <template>
   <div>
-    <header class="resume-header">
+    <header class="header--resume">
       <div class="title">
-        <h1 class="intro">Bienvenue sur mon Portfolio</h1>
-        <h2 class="intro">
+        <h1>Bienvenue sur mon Portfolio</h1>
+        <h2 class="portfolio--intro">
           Ici vous trouverez quelques exemples de mes réalisations
         </h2>
         <span class="parag1"
@@ -22,7 +22,7 @@
       </b-button>
       <b-collapse class="collapsible" id="collapse-photo">
         <section id="photoshop">
-          <div class="photo-block">
+          <div class="portfolio--photo-block">
             <div class="picture">
               <a href="@/assets/images/facebook-pp-2.png" target="_blank"
                 ><img
@@ -39,45 +39,32 @@
                 </div>
               </a>
             </div>
-            <h3 class="description-video">Photo de profil Facebook</h3>
-            <p class="description-video">
+            <h3 class="portfolio--description-video">
+              Photo de profil Facebook
+            </h3>
+            <p class="portfolio--description-video">
               Malgré le fait qu'elle ne me mette pas en valeur, j'ai apprécié
               faire cette photo de profil. Je préfère celà à une photo
               personnelle dans le cas de Facebook.
             </p>
           </div>
 
-          <div class="photo-block">
-            <div class="picture">
-              <img
-                class="pic-slides"
-                src="@/assets/images/streamkit.png"
-                style="height:200px"
-              />
-              <div class="img-layer">
-                <a href="@/assets/images/streamkit.png" target="_blank"
-                  ><p class="img-ext-lnk">
-                    <i class="fas fa-external-link-alt"></i></p
-                ></a>
-              </div>
-            </div>
+          <div class="portfolio--photo-block">
+            <splide class="splide" :options="options">
+              <splide-slide class="picture">
+                <img class="pic-slides" src="@/assets/images/streamkit.png" />
+              </splide-slide>
 
-            <div class="picture">
-              <img
-                class="pic-slides"
-                src="@/assets/images/SkyyOne Overlayv2.png"
-                style="height:200px"
-              />
-              <div class="img-layer">
-                <a href="@/assets/images/SkyyOne Overlayv2.png" target="_blank"
-                  ><p class="img-ext-lnk">
-                    <i class="fas fa-external-link-alt"></i></p
-                ></a>
-              </div>
-            </div>
+              <splide-slide class="picture">
+                <img
+                  class="pic-slides"
+                  src="@/assets/images/SkyyOne Overlayv2.png"
+                />
+              </splide-slide>
+            </splide>
 
-            <h3 class="description-video">StreamKit</h3>
-            <p class="description-video">
+            <h3 class="portfolio--description-video">StreamKit</h3>
+            <p class="portfolio--description-video">
               Plutôt présent sur internet et plus précisemment sur Twitch, j'ai
               eu plusieurs occasions d'aider des petits streamers à
               personnaliser leur chaîne, notamment grâce à mon utilisation de
@@ -87,82 +74,56 @@
             </p>
           </div>
 
-          <div class="photo-block">
-            <div class="picture">
-              <img
-                alt="Logos"
-                src="@/assets/images/instin 280.png"
-                height="200px"
-                width="200px"
-                class="pp-slides"
-              />
-              <div class="img-layer">
-                <a href="@/assets/images/instin 280.png" target="_blank"
-                  ><p class="img-ext-lnk">
-                    <i class="fas fa-external-link-alt"></i></p
-                ></a>
-              </div>
-            </div>
+          <div class="portfolio--photo-block">
+            <splide class="splide--photo" :options="options">
+              <splide-slide class="picture">
+                <img
+                  alt="Logos"
+                  src="@/assets/images/instin 280.png"
+                  height="200px"
+                  width="200px"
+                  class="pp-slides"
+                />
+              </splide-slide>
 
-            <div class="picture">
-              <img
-                class="pp-slides"
-                src="@/assets/images/Charni2.png"
-                style="height:200px"
-                width="200px"
-              />
-              <div class="img-layer">
-                <a href="@/assets/images/Charni2.png" target="_blank"
-                  ><p class="img-ext-lnk">
-                    <i class="fas fa-external-link-alt"></i></p
-                ></a>
-              </div>
-            </div>
+              <splide-slide class="picture">
+                <img
+                  class="pp-slides"
+                  src="@/assets/images/Charni2.png"
+                  style="height:200px"
+                  width="200px"
+                />
+              </splide-slide>
 
-            <div class="picture">
-              <img
-                class="pp-slides"
-                src="@/assets/images/DDP V6.png"
-                style="height:200px"
-              />
-              <div class="img-layer">
-                <a href="@/assets/images/DDP V6.png" target="_blank"
-                  ><p class="img-ext-lnk">
-                    <i class="fas fa-external-link-alt"></i></p
-                ></a>
-              </div>
-            </div>
+              <splide-slide class="picture">
+                <img
+                  class="pp-slides"
+                  src="@/assets/images/DDP V6.png"
+                  style="height:200px"
+                />
+              </splide-slide>
 
-            <div class="picture">
-              <img
-                class="pp-slides"
-                src="@/assets/images/Logo 2.png"
-                style="height:200px"
-              />
-              <div class="img-layer">
-                <a href="@/assets/images/Logo 2.png" target="_blank"
-                  ><p class="img-ext-lnk">
-                    <i class="fas fa-external-link-alt"></i></p
-                ></a>
-              </div>
-            </div>
+              <splide-slide class="picture">
+                <img
+                  class="pp-slides"
+                  src="@/assets/images/Logo 2.png"
+                  style="height:200px"
+                />
+              </splide-slide>
 
-            <div class="picture">
-              <img
-                class="pp-slides"
-                src="@/assets/images/Ryzer_Logo.png"
-                style="height:200px"
-              />
-              <div class="img-layer">
-                <a href="@/assets/images/Ryzer_Logo.png" target="_blank"
-                  ><p class="img-ext-lnk">
-                    <i class="fas fa-external-link-alt"></i></p
-                ></a>
-              </div>
-            </div>
+              <splide-slide class="picture">
+                <img
+                  class="pp-slides"
+                  src="@/assets/images/Ryzer_Logo.png"
+                  style="height:200px"
+                />
+              </splide-slide>
+            </splide>
 
-            <h3 class="description-video">Photos de profils d'amis</h3>
-            <p class="description-video">
+            <h3 class="portfolio--description-video">
+              Photos de profils d'amis
+            </h3>
+            <p class="portfolio--description-video">
               Il m'est arrivé plusieurs fois de proposer à mes amis des photos
               de profils pour les réseaux sociaux vidéoludiques. Pour la
               plupart, je me suis amusé à réutiliser un style que j'avais en
@@ -170,7 +131,7 @@
             </p>
           </div>
 
-          <div class="photo-block">
+          <div class="portfolio--photo-block">
             <div class="picture">
               <a href="@/assets/images/ArcaLogo3.png" target="_blank"
                 ><img
@@ -187,8 +148,8 @@
                 </div>
               </a>
             </div>
-            <h3 class="description-video">Logo d'entreprise</h3>
-            <p class="description-video">
+            <h3 class="portfolio--description-video">Logo d'entreprise</h3>
+            <p class="portfolio--description-video">
               En plus de faire des logos pour les photos de profils d'amis, j'ai
               également eu l'occasion de réaliser le logo de la société Arca
               Soudure.
@@ -221,7 +182,7 @@
           <b-collapse class="collapsible" id="collapse-source">
             <div class="games">
               <div class="content">
-                <p class="description-video">
+                <p class="portfolio--description-video">
                   Le moteur Source², bien que tout récent, partage de nombreux
                   aspects de son prédécesseur, sur lequel j'ai passé beaucoup de
                   temps au cours de ces dernières années, à apprendre des
@@ -257,7 +218,7 @@
                     />
                   </video>
 
-                  <p class="description-video">
+                  <p class="portfolio--description-video">
                     Cette vidéo montre le début de la map, les tuyaux visibles
                     ont étés placés grâce à l'outil de <i>tile meshing</i>
                   </p>
@@ -277,7 +238,7 @@
                     />
                   </video>
 
-                  <p class="description-video">
+                  <p class="portfolio--description-video">
                     Ici il est question de séquence scriptée. La créature (un
                     <i>headcrab</i>) qui arrive du pilier est "appelée" par une
                     entité qui la fait apparaître, et une autre entité (nommée
@@ -301,7 +262,7 @@
                     />
                   </video>
 
-                  <p class="description-video">
+                  <p class="portfolio--description-video">
                     Un autre exemple de séquence scriptée. Ici le
                     <i>zombie</i> (nom donnée à ces presonnages non jouables
                     dans le jeu Half-Life) effectue une animation de base (il
@@ -330,7 +291,7 @@
                     />
                   </video>
 
-                  <p class="description-video">
+                  <p class="portfolio--description-video">
                     Dernier exemple de séquence scriptée. Cette fois-ci lorsque
                     le joueur s'approche de la porte, un
                     <i>trigger</i> déclenche la marche des soldats ainsi que le
@@ -379,9 +340,8 @@
           </b-button>
           <b-collapse class="collapsible" id="collapse-unreal">
             <div class="games">
-
               <div class="content">
-                <p class="description-video">
+                <p class="portfolio--description-video">
                   L'Unreal Engine 4 doit être le moteur graphique sur lequel
                   j'ai passé le plus de temps à apprendre le développement en
                   général. Alors que je me concentrais davantage sur le level
@@ -409,7 +369,7 @@
                     />
                   </video>
 
-                  <p class="description-video">
+                  <p class="portfolio--description-video">
                     Cette vidéo montre le premier jeu que j'ai terminé : il
                     s'agit d'un cours sur la création d'un jeu de plateforme 3D
                     que j'ai suivi, la version que j'ai reproduit diffère
@@ -433,7 +393,7 @@
                     />
                   </video>
 
-                  <p class="description-video">
+                  <p class="portfolio--description-video">
                     Pendant une période d'environ 2 mois, j'avais rejoint une
                     petite équipe de personne souhaitant développer un projet
                     basé sur la refonte de certains éléments du jeu Half-Life 2
@@ -457,7 +417,7 @@
                     />
                   </video>
 
-                  <p class="description-video">
+                  <p class="portfolio--description-video">
                     Pour m'amuser et découvrir d'autres facettes du
                     développement, j'ai tenté d'animer le modèle 3D des soldats
                     de Half-Life 2 à partir de l'animateur en ligne Mixamo.
@@ -478,7 +438,7 @@
                     />
                   </video>
 
-                  <p class="description-video">
+                  <p class="portfolio--description-video">
                     Cette vidéo montre un bug étant survenu lorsque j'ai porté
                     les animations du zombie de Half-Life² dans Unreal. Durant
                     mes expérimentations, il m'arrivait souvent de me retrouver
@@ -500,7 +460,7 @@
                     />
                   </video>
 
-                  <p class="description-video">
+                  <p class="portfolio--description-video">
                     Cette vidéo montre un bug étant survenu lorsque j'ai porté
                     les animations du zombie de Half-Life² dans Unreal. Durant
                     mes expérimentations, il m'arrivait souvent de me retrouver
@@ -533,7 +493,7 @@
           <b-collapse class="collapsible" id="collapse-blender">
             <div class="games">
               <div class="content">
-                <p class="description-video">
+                <p class="portfolio--description-video">
                   Il m'est arrivé par moments d'apprendre à utiliser Blender
                   pour créer des modèles 3D. Je n'ai jamais approfondi mes
                   connaissances dans ce domaine mais j'ai tout de même fait
@@ -546,7 +506,9 @@
                     height="360px"
                   />
 
-                  <p class="description-video">Un distributeur automatique</p>
+                  <p class="portfolio--description-video">
+                    Un distributeur automatique
+                  </p>
                 </div>
 
                 <div class="video-block">
@@ -556,7 +518,7 @@
                     height="360px"
                   />
 
-                  <p class="description-video">
+                  <p class="portfolio--description-video">
                     Une locomotive et des wagons (uniquement les modèles non
                     texturés)
                   </p>
@@ -569,6 +531,21 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      options: {
+        rewind: true,
+        type: "loop",
+        focus: "center",
+        autoplay: true,
+      },
+    };
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 @import "@/modules/main";

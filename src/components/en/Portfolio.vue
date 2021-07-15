@@ -1,9 +1,11 @@
 <template>
   <div>
-    <header class="resume-header">
+    <header class="header--resume">
       <div class="title">
-        <h1 class="intro">Welcome to my Portfolio</h1>
-        <h2 class="intro">Here you will find some examples of my creations</h2>
+        <h1>Welcome to my Portfolio</h1>
+        <h2 class="portfolio--intro">
+          Here you will find some examples of my creations
+        </h2>
         <span class="parag1"
           >These are stored in categories so you will be able to look to the
           ones that interest you first. <br /><i

@@ -4,53 +4,55 @@
       <div class="title">
         <h1>JONATHAN BINOT</h1>
       </div>
-      <article class="header--block">
-        <img
-          src="@/assets/images/PPCV.png"
-          alt="Ma photo"
-          class="header--block--img"
-          height="92"
-        />
-        <div class="header--block--text">
-          <h2 class="descriptif">
-            Web developer - Available now
-          </h2>
-          <p class="descriptif">
-            Passionate about computers and high tech since I was a child, I wish
-            to work in web development while I follow lessons with
-            OpenClassrooms. I can easily and quickly adapt to change and resolve
-            issues that could occur while at work. You can access to some of my
-            work by following this link :
+      <section class="header--title">
+        <article class="header--block">
+          <img
+            src="@/assets/images/PPCV.png"
+            alt="Ma photo"
+            class="header--block--img"
+            height="92"
+          />
+          <div class="header--block--text">
+            <h2 class="descriptif">
+              Web developer - Available now
+            </h2>
+            <p class="descriptif">
+              Passionate about computers and high tech since I was a child, I
+              wish to work in web development while I follow lessons with
+              OpenClassrooms. I can easily and quickly adapt to change and
+              resolve issues that could occur while at work. You can access to
+              some of my work by following this link :
+              <a
+                class="link"
+                href="https://github.com/SprtJonathan"
+                target="blank"
+                >My GitHub profile</a
+              >
+            </p>
+          </div>
+        </article>
+
+        <div class="title-info">
+          <p>
+            02/14/1999 (<span id="age">{{ this.$store.state.age }}</span> years
+            old)
+          </p>
+          <p>
+            <a class="link" href="mailto:contact@jonathanbinot.com"
+              >Mail contact <i class="fas fa-external-link-alt"></i
+            ></a>
+          </p>
+          <p>
             <a
               class="link"
-              href="https://github.com/SprtJonathan"
-              target="blank"
-              >My GitHub profile</a
-            >
+              target="_blank"
+              href="https://linkedin.com/in/jonathan-binot-260267154"
+              >My LinkedIn profile <i class="fas fa-external-link-alt"></i
+            ></a>
           </p>
+          <p>Driving License (since 03/23/18)</p>
         </div>
-      </article>
-
-      <div class="title-info">
-        <p>
-          02/14/1999 (<span id="age">{{ this.$store.state.age }}</span> years
-          old)
-        </p>
-        <p>
-          <a class="link" href="mailto:contact@jonathanbinot.com"
-            >Mail contact <i class="fas fa-external-link-alt"></i
-          ></a>
-        </p>
-        <p>
-          <a
-            class="link"
-            target="_blank"
-            href="https://linkedin.com/in/jonathan-binot-260267154"
-            >My LinkedIn profile <i class="fas fa-external-link-alt"></i
-          ></a>
-        </p>
-        <p>Driving License (since 03/23/18)</p>
-      </div>
+      </section>
     </header>
 
     <div class="body">
@@ -108,7 +110,7 @@
               february 2019 à july 2020 with an unlimited time contract
             </h3>
             <div class="exp-content">
-              <a href="https://latetedanslesnuages.com"
+              <a href="https://latetedanslesnuages.com" target="_blank"
                 ><img
                   src="@/assets/images/ltdn.png"
                   alt="logo la tete dans les nuages"
@@ -143,7 +145,7 @@
           <div class="exp-desc">
             <h3>February 2016 - 1 week</h3>
             <div class="exp-content">
-              <a href="https://www.epitech.eu/"
+              <a href="https://www.epitech.eu/" target="_blank"
                 ><img
                   src="@/assets/images/epitech-logo.jpg"
                   alt="logo epitech"
@@ -162,7 +164,7 @@
           <div class="exp-desc">
             <h3>February 2015 - 1 week</h3>
             <div class="exp-content">
-              <a href="https://www.pole-emploi.fr/accueil/"
+              <a href="https://www.pole-emploi.fr/accueil/" target="_blank"
                 ><img
                   src="@/assets/images/pole-emploi-logo.png"
                   alt="logo pole emploi"
@@ -183,16 +185,15 @@
       </b-collapse>
 
       <b-button class="collapsible--button" v-b-toggle.collapse-skills>
-        <h2 class="active">Skills</h2>
+        <h2 class="active">Compétences</h2>
       </b-button>
-      <b-collapse class="collapsible" id="collapse-skills">
+      <b-collapse class="collapsible-skills" id="collapse-skills">
         <b-button class="collapsible--button" v-b-toggle.collapse-hard-skills>
           <h2 class="active">Hard Skills</h2>
         </b-button>
         <b-collapse class="collapsible" id="collapse-hard-skills">
           <div class="informatique">
-            <span class="collapsible">Computer tech</span>
-            <div class="content">
+            <div class="collapsible--content">
               <p>Microsoft Office (Word, Excel and Power Point)</p>
               <p>Magix Vegas Pro and Adobe Premiere Pro : operational level</p>
               <p>Adobe Photoshop : Image editing and visuals creation</p>
@@ -254,7 +255,7 @@
               </p>
 
               <h3 class="collapsible--text">
-                <mark class="blue-undeline">Per</mark>sonal projects
+                <mark class="blue-undeline">Pro</mark>jets personnels
               </h3>
               <p>Personal website</p>
             </div>
@@ -266,7 +267,7 @@
         </b-button>
         <b-collapse class="collapsible" id="collapse-soft-skills">
           <div class="soft-skills">
-            <div class="content">
+            <div class="collapsible--content">
               <p>Adaptation</p>
               <p>Confidence relation with my colleagues</p>
               <p>
@@ -286,7 +287,7 @@
         </b-button>
         <b-collapse class="collapsible" id="collapse-linguistics">
           <div class="langues">
-            <div class="content">
+            <div class="collapsible--content">
               <p>English: Bilingual</p>
               <p>German: level B1 LV2 (french baccalaureate certification)</p>
               <p>Polish: Mother tongue (spoken and read)</p>
@@ -301,7 +302,7 @@
       <b-collapse class="collapsible" id="collapse-hobby">
         <section id="interets">
           <div class="hobby-desc">
-            <h3>Music</h3>
+            <h3 class="collapsible--text">Music</h3>
             <p>
               <b>2006 to 2014 (8 years) - </b>Piano in the Conservatoire à
               Rayonnement Régional de Lyon, played on a daily basis.
@@ -315,7 +316,7 @@
             <p>I also have the <i>perfect pitch !</i></p>
           </div>
           <div class="hobby-desc">
-            <h3>Editing</h3>
+            <h3 class="collapsible--text">Editing</h3>
             <p>
               Shooting and editing of some short films with the use of a green
               screen.
@@ -324,11 +325,11 @@
               Video editing (on Vegas and Premiere Pro) for personnal projects.
             </p>
             <p>
-              Photograph editing (on Photoshop) for personnal projects. <br /><a
-                class="modal-button link"
-                href="#photoModal"
-                >Learn more...</a
-              >
+              Photograph editing (on Photoshop) for personnal projects.
+              <br />
+              <b-button v-b-modal.photoModal class="modal-button link">
+                Learn more...
+              </b-button>
             </p>
           </div>
           <div class="hobby-desc">
@@ -336,9 +337,10 @@
             <p>
               Learning of different game dev softwares such as Unreal Engine 4,
               Source Engine 1 & 2, and more recently Unity on self-taught.
-              <br /><a class="modal-button link" href="#gamedevModal"
-                >Learn more...</a
-              >
+              <br />
+              <b-button v-b-modal.gamedevModal class="modal-button link">
+                Learn more...
+              </b-button>
             </p>
             <p>
               High interest on new technilogies such as virtual reality and its
@@ -349,93 +351,105 @@
           <!-- Photo Modal -->
 
           <!-- The Modal -->
-          <div id="photoModal" class="modal">
+          <b-modal
+            id="photoModal"
+            class="modal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="Photo Modal"
+            aria-hidden="true"
+            hide-header
+            hide-footer
+          >
             <!-- Modal content -->
-            <div class="modal-content">
-              <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2>Photograph editing</h2>
-              </div>
-              <div class="modal-body">
-                <span
-                  >I really enjoy to manipulate editing softwares such as Adobe
-                  Photoshop. As a concrete example, I created every background
-                  image of this website from scratch. I also like to create
-                  funny images such as my Facebook profile picture</span
-                >
-                <br />
-                <br />
-                <img
-                  alt="Twitch StreamKit"
-                  src="@/assets/images/streamkit.png"
-                  height="112"
-                  width="200"
-                  class="pp-fb"
-                />
-                <img
-                  alt="Photo de profil facebook 2"
-                  src="@/assets/images/facebook-pp-2.png"
-                  height="112"
-                  width="112"
-                  class="pp-fb"
-                />
-              </div>
-              <div class="modal-footer">
-                <br />
-              </div>
+
+            <div class="modal-header">
+              <h2>Photograph editing</h2>
             </div>
-          </div>
+            <div class="modal-body">
+              <span
+                >I really enjoy to manipulate editing softwares such as Adobe
+                Photoshop. As a concrete example, I created every background
+                image of this website from scratch. I also like to create funny
+                images such as my Facebook profile picture</span
+              >
+              <br />
+              <br />
+              <img
+                alt="Twitch StreamKit"
+                src="@/assets/images/streamkit.png"
+                height="112"
+                width="200"
+                class="pp-fb"
+              />
+              <img
+                alt="Photo de profil facebook 2"
+                src="@/assets/images/facebook-pp-2.png"
+                height="112"
+                width="112"
+                class="pp-fb"
+              />
+            </div>
+            <b-button class="mt-3" block @click="$bvModal.hide('photoModal')"
+              >Fermer</b-button
+            >
+          </b-modal>
 
           <!-- Game Dev Modal -->
-
           <!-- The Modal -->
-          <div id="gamedevModal" class="modal">
+          <b-modal
+            class="modal"
+            id="gamedevModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="Game Dev Modal"
+            aria-hidden="true"
+            hide-header
+            hide-footer
+          >
             <!-- Modal content -->
-            <div class="modal-content">
-              <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2>Game dev</h2>
-              </div>
-              <div class="modal-body">
-                <span
-                  >As a video game passionate, I was always interested by their
-                  creation. So, I started to learn how to use some game engines,
-                  like Unreal Engine 4 but also Valve's engines : Source 1 and
-                  more recently, with the release of Half-Life: Alyx in VR,
-                  Source 2.</span
-                >
-                <br />
-                <br />
-                <a target="_blank" href="@/assets/images/Hammer_2_pic1.png"
-                  ><img
-                    alt="Capture d'écran du logiciel Hammer de Source 2"
-                    src="@/assets/images/Hammer_2_pic1.png"
-                    height="260"
-                    width="500"
-                    class="gamedev-pic-left"
-                /></a>
-                <a target="_blank" href="@/assets/images/Hammer_2_pic2.png"
-                  ><img
-                    alt="Capture d'écran du logiciel Hammer de Source 2 (2)"
-                    src="@/assets/images/Hammer_2_pic2.png"
-                    height="260"
-                    width="500"
-                    class="gamedev-pic-center"
-                /></a>
-                <a target="_blank" href="@/assets/images/Hammer_2_pic3.png"
-                  ><img
-                    alt="Capture d'écran de ma map faite sur Source 2 dans Half-Life: Alyx"
-                    src="@/assets/images/Hammer_2_pic3.png"
-                    height="260"
-                    width="260"
-                    class="gamedev-pic-right"
-                /></a>
-              </div>
-              <div class="modal-footer">
-                <br />
-              </div>
+            <div class="modal-header">
+              <h2>Game dev</h2>
             </div>
-          </div>
+            <div class="modal-body">
+              <span
+                >As a video game passionate, I was always interested by their
+                creation. So, I started to learn how to use some game engines,
+                like Unreal Engine 4 but also Valve's engines : Source 1 and
+                more recently, with the release of Half-Life: Alyx in VR, Source
+                2.</span
+              >
+              <br />
+              <br />
+              <a target="_blank" href="@/assets/images/Hammer_2_pic1.png"
+                ><img
+                  alt="Capture d'écran du logiciel Hammer de Source 2"
+                  src="@/assets/images/Hammer_2_pic1.png"
+                  height="260"
+                  width="500"
+                  class="gamedev-pic-left"
+              /></a>
+              <a target="_blank" href="@/assets/images/Hammer_2_pic2.png"
+                ><img
+                  alt="Capture d'écran du logiciel Hammer de Source 2 (2)"
+                  src="@/assets/images/Hammer_2_pic2.png"
+                  height="260"
+                  width="500"
+                  class="gamedev-pic-center"
+              /></a>
+              <a target="_blank" href="@/assets/images/Hammer_2_pic3.png"
+                ><img
+                  alt="Capture d'écran de ma map faite sur Source 2 dans Half-Life: Alyx"
+                  src="@/assets/images/Hammer_2_pic3.png"
+                  height="260"
+                  width="260"
+                  class="gamedev-pic-right"
+              /></a>
+            </div>
+            <b-button class="mt-3" block @click="$bvModal.hide('gamedevModal')"
+              >Fermer</b-button
+            >
+          </b-modal>
         </section>
       </b-collapse>
 
