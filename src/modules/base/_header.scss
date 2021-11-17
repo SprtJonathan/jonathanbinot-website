@@ -1,31 +1,40 @@
 header.header--classic {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   position: fixed;
   left: 0px;
   top: 0px;
   height: fit-content;
   padding-top: 15px;
   padding-bottom: 15px;
-  width: 100vw;
-  background-color: rgba(10, 10, 10, 0.7);
-  backdrop-filter: blur(2px);
-  box-shadow: rgba(10, 10, 10, 0.7) 1px 2px 5px;
+  width: fit-content;
+  //background-color: rgba(10, 10, 10, 0.7);
   z-index: $menu-zindex;
-  ul {
-    height: 20%;
+  .navbar--folded {
+    display: none;
+    animation: slide-right 200ms;
+  }
+  .navbar--expanded {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin: 0px;
+    animation: slide-left 500ms;
+    height: 20%;
+    width: fit-content;
+    flex-direction: column;
+    position: fixed;
+    top: 6rem;
+    right: 1rem;
+    align-items: flex-end;
     padding: 0px;
     li {
       list-style: none;
-      font-family: $primary-font;
-      letter-spacing: 2px;
-      margin-left: 15px;
+      @include button-base-style;
+      &:hover {
+        padding-left: 1.5rem;
+        transform: scale(1.025);
+        transform-origin: right;
+      }
       a {
         text-decoration: none;
         color: $text--dark;
@@ -38,11 +47,53 @@ header.header--classic {
       }
 
       a:hover {
-        color: $terciary-color;
         font-weight: 600;
+        font-style: italic;
+        color: white;
+        animation: ease;
         text-shadow: $terciary-color 0px 0px 5px;
       }
     }
+  }
+
+  .open-menu {
+    display: inline-block;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    color: var(--text-color);
+    box-shadow: $classic-box-shadow;
+    border-radius: 50%;
+    backdrop-filter: blur(2px);
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    margin: auto;
+    overflow: hidden;
+    transition: all ease 500ms;
+    transition: rotate(90deg) ease 500ms;
+    animation: rotate-180 500ms;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .open-menu--opened {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    box-shadow: $classic-box-shadow;
+    border-radius: 50%;
+    backdrop-filter: blur(2px);
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    margin: auto;
+    overflow: hidden;
+    animation: rotate180 500ms;
   }
 
   .active {
@@ -65,8 +116,6 @@ header.header--classic {
 
 @media (min-width: 768px) {
   header.header--classic {
-    display: flex;
-    flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     position: fixed;
@@ -76,9 +125,6 @@ header.header--classic {
     padding-top: 15px;
     padding-bottom: 15px;
     width: 100%;
-    background-color: rgba(10, 10, 10, 0.7);
-    backdrop-filter: blur(2px);
-    box-shadow: rgba(10, 10, 10, 0.7) 1px 2px 5px;
     ul {
       min-width: 40%;
       justify-content: space-around;

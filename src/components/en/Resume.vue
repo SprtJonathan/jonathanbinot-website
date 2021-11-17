@@ -38,11 +38,6 @@
             old)
           </p>
           <p>
-            <a class="link" href="mailto:contact@jonathanbinot.com"
-              >Mail contact <i class="fas fa-external-link-alt"></i
-            ></a>
-          </p>
-          <p>
             <a
               class="link"
               target="_blank"

@@ -355,7 +355,7 @@
                   virtuelle. Je n'en suis qu'à mes balbutiements dans le
                   domaine, mais je progresse de jours en jours, j'apprends vite.
                 </p>
-                <div class="video-block">
+                <!--<div class="video-block">
                   <video
                     id="player"
                     playsinline
@@ -377,7 +377,7 @@
                     à des amis de de faire des sons exagérés pour rendre le
                     résultat encore plus louphoque.
                   </p>
-                </div>
+                </div>-->
 
                 <div class="video-block">
                   <video

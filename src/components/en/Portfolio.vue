@@ -386,7 +386,7 @@
                   projects in UE4. I'm only starting to scratch the surface, but
                   I progress every day, and I learn fast.
                 </p>
-                <div class="video-block">
+                <!--<div class="video-block">
                   <video
                     id="player"
                     playsinline
@@ -407,7 +407,7 @@
                     and the sounds I used. I asked some friends to make
                     exagerated sounds to get an absurd result.
                   </p>
-                </div>
+                </div>-->
 
                 <div class="video-block">
                   <video

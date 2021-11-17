@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <LanguageSelection v-if="this.$store.state.language == ''" />
+    <LanguageSelection
+      v-if="
+        this.$store.state.language == '' || this.$store.state.language == null
+      "
+    />
     <HeaderFR v-if="this.$store.state.language == 'fr'" />
     <HeaderEN v-if="this.$store.state.language == 'en'" />
     <button @click="click()"></button>
@@ -19,6 +23,9 @@ export default {
     return {
       language: localStorage.getItem("language"),
     };
+  },
+  created() {
+    document.title = "Jonathan Binot";
   },
   methods: {
     setLanguageFr() {

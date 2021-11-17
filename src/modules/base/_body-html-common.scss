@@ -61,6 +61,13 @@ button {
   }
 }
 
+.button {
+  border: transparent;
+  height: 3rem;
+  color: whitesmoke;
+  @include button-base-style;
+}
+
 .body {
   display: flex;
   flex-direction: column;

@@ -37,11 +37,6 @@
             14/02/1999 (<span id="age">{{ this.$store.state.age }}</span> ans)
           </p>
           <p>
-            <a class="link" href="mailto:contact@jonathanbinot.com"
-              >Me contacter par Mail <i class="fas fa-external-link-alt"></i
-            ></a>
-          </p>
-          <p>
             <a
               class="link"
               target="_blank"
@@ -54,7 +49,7 @@
             <a
               class="link"
               target="_blank"
-              href="../../assets/documents/CV_Binot_Jonathan.pdf"
+              href="https://github.com/SprtJonathan/jonathanbinot/blob/master/src/assets/documents/FR/CV_Binot_Jonathan.pdf"
               >Version tronquée imprimable du CV<i
                 class="fas fa-external-link-alt"
               ></i
